@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Selina's chat widget: test page</title>
+  <meta name="robots" content="noindex">
+  <style>
+    /* Plain stand-in page so you can check the widget scrolls with, and doesn't disturb, a real site. */
+    body { margin: 0; font-family: Georgia, serif; line-height: 1.6; color: #333; background: #fff; }
+    main { max-width: 640px; margin: 0 auto; padding: 32px 20px 120px; }
+    h1 { font-size: 26px; margin: 0 0 8px; }
+    .note { padding: 12px 14px; background: #f4f4f4; border-radius: 8px; font: 14px/1.5 system-ui, sans-serif; }
+    ol { font: 15px/1.7 system-ui, sans-serif; padding-left: 20px; }
+    button.page-btn { margin-top: 12px; padding: 10px 16px; font: 15px system-ui, sans-serif; }
+    .filler { height: 520px; margin-top: 24px; background: repeating-linear-gradient(#fafafa 0 40px, #f0f0f0 40px 80px); border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Widget test page</h1>
+    <p class="note">This is <strong>not</strong> the salon's website. It only exists so you can test the chat widget before it is embedded anywhere real.</p>
+
+    <ol>
+      <li>Tap the round button in the bottom-right corner.</li>
+      <li>Try the quick-action chips, the cards, and the enquiry flow.</li>
+      <li>Scroll this page: the button should stay put.</li>
+      <li>Rotate your phone, and open the keyboard: the message box must stay visible.</li>
+    </ol>
+
+    <button class="page-btn" type="button" onclick="SelinasChat.toggle()">Open or close chat from the page</button>
+    <div class="filler" aria-hidden="true"></div>
+  </main>
+
+  <!--
+    The widget. Keep widget.js and styles.css in the same folder.
+    Leave data-api-url out to stay in DEMO MODE. When your backend exists, add:
+      data-api-url="https://YOUR-BACKEND.example/chat"
+    Optional: data-enquiry-url="https://YOUR-BACKEND.example/enquiry"
+  -->
+  <script src="widget.js" defer></script>
+</body>
+</html>
