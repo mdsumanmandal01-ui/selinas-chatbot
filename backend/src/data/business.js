@@ -660,7 +660,7 @@ export const BUSINESS_DATA = Object.freeze({
       price: {
         value: "From £995, or £3,995 for all areas",
         status: "verified",
-        note: "A deposit holds your date and the full balance is due 10 days before the course starts. Deposits are non-refundable.",
+        note: "A deposit holds your date and the full balance is due 10 days before the appointment.",
         source: URLS.courses,
         lastVerified: "2026-10-25",
       },
