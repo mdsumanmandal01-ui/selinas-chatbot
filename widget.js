@@ -306,8 +306,6 @@
     lastChips: null,
     started: false,
     controller: null,
-    demoTimer: null, // demo mode only: pending "typing" delay before a pre-written reply
-    history: [], // recent chat turns sent to the backend so follow-up questions make sense
   };
 
   const host = h("div", { id: "selinas-chat-root" });
@@ -455,4 +453,9 @@
     return h("article", { class: "card" },
       s.img && /^https:\/\//.test(s.img) ? h("img", { src: s.img, alt: "", loading: "lazy" }) : null,
       h("h3", { class: "card-title" }, s.name),
-      h("p",
+      h("p", { class: "card-desc" }, s.desc),
+      priceNodes(s),
+      h("div", { class: "card-actions" },
+        ext(s.url, "Learn more", "btn btn-ghost"),
+        h("button", {
+          cl
