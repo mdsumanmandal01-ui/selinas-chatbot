@@ -2,7 +2,7 @@
 # It is here for later, when the project is deployed from GitHub or the Wrangler tool.
 # NEVER put GEMINI_API_KEY in this file. It is a Secret set in Cloudflare.
 
-name = "selinas-chatbot-api"
+name = "selinas-chatbot"
 main = "src/index.js"
 compatibility_date = "2026-01-01"
 
