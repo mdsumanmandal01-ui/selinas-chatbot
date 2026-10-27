@@ -1,0 +1,13 @@
+# Not used when you paste the code into the Cloudflare dashboard (Stage 1 method).
+# It is here for later, when the project is deployed from GitHub or the Wrangler tool.
+# NEVER put GEMINI_API_KEY in this file. It is a Secret set in Cloudflare.
+
+name = "selinas-chatbot-api"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+
+[vars]
+ALLOWED_ORIGINS = "https://mdsumanmandal01-ui.github.io"
+GEMINI_MODEL = "gemini-2.5-flash-lite"
+MAX_MESSAGE_CHARS = "1000"
+AI_TIMEOUT_MS = "20000"
