@@ -178,7 +178,7 @@ function cleanHistory(input) {
 
 async function askGemini({ env, message, history }) {
   const model = /^[a-z0-9.\-]+$/i.test(env.GEMINI_MODEL || "") ? env.GEMINI_MODEL : DEFAULT_MODEL;
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
+  const url = "https://generativelanguage.googleapis.com/v1beta/models/" + model + ":generateContent";
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), positiveInt(env.AI_TIMEOUT_MS, DEFAULT_AI_TIMEOUT_MS));
 
